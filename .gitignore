@@ -1,2 +1,4 @@
 /test
 /myenv
+/src/__pycache__
+/src/components/__pycache__
