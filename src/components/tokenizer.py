@@ -8,6 +8,7 @@ from textblob import TextBlob
 
 # Preprocessing function
 def preprocess_input(input_text):
+    """Preprocess the input filter out the word and return the lemmatized words"""
     # Correct spelling using TextBlob
     corrected_text = str(TextBlob(input_text).correct())
     
@@ -27,10 +28,11 @@ def preprocess_input(input_text):
 
 # Match input to the closest task
 def find_best_match(processed_text):
-    from src import app 
+    """Finding best match for the words and return the match result """
+    from src import Boa
     best_match = None
     best_score = 0
-    for task, phrases in app.task_patterns.items():
+    for task, phrases in Boa.task_patterns.items():
         for phrase in phrases:
             phrase_tokens = set(word_tokenize(phrase))
             input_tokens = set(word_tokenize(processed_text))
