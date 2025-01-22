@@ -6,7 +6,6 @@ from nltk.stem import WordNetLemmatizer
 from textblob import TextBlob
 
 
-
 # Preprocessing function
 def preprocess_input(input_text):
     # Correct spelling using TextBlob
