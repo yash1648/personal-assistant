@@ -1,5 +1,5 @@
 
-from src import app
+
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
@@ -27,6 +27,7 @@ def preprocess_input(input_text):
 
 # Match input to the closest task
 def find_best_match(processed_text):
+    from src import app 
     best_match = None
     best_score = 0
     for task, phrases in app.task_patterns.items():
